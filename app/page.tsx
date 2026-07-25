@@ -214,17 +214,17 @@ export default function Home() {
         </section>
 
         <section id="news">
-          <h2>news</h2>
+          <h2>News</h2>
           <div className="news-list">
             <div className="news-item">
-              <time>May 01, 2026</time>
+              <time>May 2026</time>
               <p>
                 Our papers <strong>SetPO</strong> and <strong>OptProver</strong> have
                 been accepted to <strong>ICML 2026</strong>.
               </p>
             </div>
             <div className="news-item">
-              <time>2026</time>
+              <time>Nov 2025</time>
               <p>
                 Our paper <strong>SITA</strong> has been accepted to{" "}
                 <strong>AAAI 2026</strong>.
@@ -242,7 +242,7 @@ export default function Home() {
         </section>
 
         <section id="education">
-          <h2>education</h2>
+          <h2>Education</h2>
           <div className="education-list">
             <article className="education-item">
               <img src="/pku-red.png" alt="Peking University" width="64" height="64" />

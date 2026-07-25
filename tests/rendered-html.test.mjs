@@ -31,8 +31,11 @@ test("server-renders Chenyi Li's academic homepage", async () => {
   assert.match(html, /Chenyi Li/);
   assert.match(html, /Welcome to my personal homepage/);
   assert.match(html, /research interests/i);
-  assert.match(html, /news/i);
-  assert.match(html, /education/i);
+  assert.match(html, /<h2>News<\/h2>/);
+  assert.match(html, /<h2>Education<\/h2>/);
+  assert.match(html, /May 2026/);
+  assert.match(html, /Nov 2025/);
+  assert.doesNotMatch(html, /May 01, 2026/);
   assert.match(html, /SetPO/);
   assert.match(html, /OptProver/);
   assert.match(html, /SITA/);
