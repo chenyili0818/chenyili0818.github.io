@@ -5,7 +5,6 @@ const profileLinks = {
   scholar: "https://scholar.google.com/citations?user=VsPS8-cAAAAJ&hl=en",
   orcid: "https://orcid.org/0009-0003-0082-0260",
   github: "https://github.com/chenyili0818",
-  cv: "/cv/chenyi-li-cv.pdf",
 };
 
 const selectedPublications = [
@@ -140,7 +139,6 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#news">News</a>
             <a href="#publications">Publications</a>
-            <ExternalLink href={profileLinks.cv}>CV</ExternalLink>
           </nav>
         </div>
       </header>
@@ -156,7 +154,6 @@ export default function Home() {
               <ExternalLink href={profileLinks.scholar}>Google Scholar</ExternalLink>
               <ExternalLink href={profileLinks.github}>GitHub</ExternalLink>
               <ExternalLink href={profileLinks.orcid}>ORCID</ExternalLink>
-              <ExternalLink href={profileLinks.cv}>CV</ExternalLink>
             </div>
           </header>
 

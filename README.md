@@ -48,4 +48,3 @@ The export is written to `out/`.
 - Main page: `app/page.tsx`
 - Visual design: `app/globals.css`
 - Profile and paper imagery: `public/`
-- Downloadable CV: `public/cv/chenyi-li-cv.pdf`
