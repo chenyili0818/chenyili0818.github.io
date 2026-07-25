@@ -29,13 +29,18 @@ test("server-renders Chenyi Li's academic homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /Chenyi Li/);
-  assert.match(html, /Reasoning/);
-  assert.match(html, /Research in focus/);
+  assert.match(html, /Welcome to my personal homepage/);
+  assert.match(html, /research interests/i);
+  assert.match(html, /news/i);
+  assert.match(html, /education/i);
   assert.match(html, /SetPO/);
   assert.match(html, /OptProver/);
   assert.match(html, /SITA/);
-  assert.match(html, /Selected publications/);
+  assert.match(html, /selected publications/i);
   assert.match(html, /Google Scholar/);
   assert.match(html, /ORCID/);
+  assert.match(html, /Hosted by/);
+  assert.match(html, /GitHub Pages/);
+  assert.doesNotMatch(html, /Research in focus/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Starter Project/);
 });
