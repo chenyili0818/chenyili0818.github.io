@@ -27,7 +27,7 @@ const selectedPublications = [
     title:
       "OptProver: Bridging Olympiad and Optimization through Continual Training in Formal Theorem Proving",
     authors:
-      "Chenyi Li, Yanchen Nie, Zhenyu Ming, Gong Zhang, Kun Yuan, Zaiwen Wen",
+      "Chenyi Li*, Yanchen Nie*, Zhenyu Ming, Gong Zhang, Kun Yuan, Zaiwen Wen",
     publication: "The 43rd International Conference on Machine Learning, 2026",
     links: [
       ["arXiv", "https://arxiv.org/abs/2604.23712"],
@@ -94,7 +94,7 @@ const selectedPublications = [
     venue: "Preprint",
     title:
       "Accelerated Natural Gradient Method for Parametric Manifold Optimization",
-    authors: "Chenyi Li, Shuchen Zhu, Zhonglin Xie, Zaiwen Wen",
+    authors: "Chenyi Li*, Shuchen Zhu*, Zhonglin Xie, Zaiwen Wen",
     publication: "arXiv preprint, 2025",
     links: [["arXiv", "https://arxiv.org/abs/2504.05753"]],
   },
@@ -103,7 +103,7 @@ const selectedPublications = [
 export const metadata: Metadata = {
   title: "Chenyi Li",
   description:
-    "Chenyi Li is a Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, optimization, and generative modeling.",
+    "Chenyi Li is a Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, and optimization.",
 };
 
 function ExternalLink({
@@ -186,8 +186,8 @@ export default function Home() {
 
             <p>
               My research interests broadly span large language model reasoning,
-              formal theorem proving, optimization, and generative modeling. I focus
-              on the following directions:
+              formal theorem proving, and optimization. I focus on the following
+              directions:
             </p>
 
             <ul>
@@ -200,8 +200,9 @@ export default function Home() {
                 autoformalization, and formalization of applied mathematics.
               </li>
               <li>
-                <strong>Generative Modeling:</strong> efficient diffusion and flow
-                models, especially one-step distillation.
+                <strong>Optimization:</strong> designing better optimization
+                algorithms and developing optimization-inspired methods for large
+                language models.
               </li>
             </ul>
 

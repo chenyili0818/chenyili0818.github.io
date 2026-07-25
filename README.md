@@ -7,8 +7,7 @@ The site highlights research in:
 
 - LLM reasoning and reinforcement learning
 - formal theorem proving and Lean 4
-- optimization formalization
-- efficient generative modeling
+- optimization algorithms and optimization-inspired methods for LLMs
 
 ## Local preview
 

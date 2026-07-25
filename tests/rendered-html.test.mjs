@@ -36,11 +36,16 @@ test("server-renders Chenyi Li's academic homepage", async () => {
   assert.match(html, /SetPO/);
   assert.match(html, /OptProver/);
   assert.match(html, /SITA/);
+  assert.match(html, /Chenyi Li\*, Yanchen Nie\*/);
+  assert.match(html, /Chenyi Li\*, Shuchen Zhu\*/);
+  assert.match(html, /Optimization:/);
   assert.match(html, /selected publications/i);
   assert.match(html, /Google Scholar/);
   assert.match(html, /ORCID/);
   assert.match(html, /Hosted by/);
   assert.match(html, /GitHub Pages/);
+  assert.doesNotMatch(html, /Generative Modeling:/);
+  assert.doesNotMatch(html, /and generative modeling/);
   assert.doesNotMatch(html, /Research in focus/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Starter Project/);
 });
