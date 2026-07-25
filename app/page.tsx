@@ -227,6 +227,10 @@ export default function Home() {
             </p>
 
             <p>
+              I am a member of the Elite Ph.D. Program in Applied Mathematics.
+            </p>
+
+            <p>
               My research interests broadly span large language model reasoning,
               formal theorem proving, and optimization. I focus on the following
               directions:
@@ -310,8 +314,8 @@ export default function Home() {
                 </div>
                 <p>Ph.D. Student in Computational Mathematics</p>
                 <p className="education-note">
-                  Advisor: Prof. Zaiwen Wen · Selected for PKU&apos;s 2024 Ph.D.
-                  Excellence Program
+                  Advisor: Prof. Zaiwen Wen · Member of the Elite Ph.D. Program in
+                  Applied Mathematics
                 </p>
               </div>
             </article>

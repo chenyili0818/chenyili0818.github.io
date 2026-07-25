@@ -30,6 +30,11 @@ test("server-renders Chenyi Li's academic homepage", async () => {
   const html = await response.text();
   assert.match(html, /Chenyi Li/);
   assert.match(html, /Welcome to my personal homepage/);
+  assert.match(
+    html,
+    /I am a member of the Elite Ph\.D\. Program in Applied Mathematics\./,
+  );
+  assert.doesNotMatch(html, /cmlr\.pku\.edu\.cn/);
   assert.match(html, /research interests/i);
   assert.match(html, /<h2>News<\/h2>/);
   assert.match(html, /<h2>Education<\/h2>/);
