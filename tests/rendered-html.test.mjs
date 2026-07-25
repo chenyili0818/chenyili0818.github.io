@@ -32,8 +32,9 @@ test("server-renders Chenyi Li's academic homepage", async () => {
   assert.match(html, /Welcome to my personal homepage/);
   assert.match(
     html,
-    /I am a member of the Elite Ph\.D\. Program in Applied Mathematics\./,
+    /Elite Ph\.D\. Program in Applied Mathematics/,
   );
+  assert.match(html, /Applied Mathematics Elite Program/);
   assert.doesNotMatch(html, /cmlr\.pku\.edu\.cn/);
   assert.match(html, /research interests/i);
   assert.match(html, /<h2>News<\/h2>/);

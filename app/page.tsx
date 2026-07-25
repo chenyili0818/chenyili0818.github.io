@@ -227,7 +227,9 @@ export default function Home() {
             </p>
 
             <p>
-              I am a member of the Elite Ph.D. Program in Applied Mathematics.
+              I am a member of both the Elite Ph.D. Program in Applied Mathematics
+              and the Applied Mathematics Elite Program at the School of Mathematical
+              Sciences, Peking University.
             </p>
 
             <p>
@@ -334,7 +336,8 @@ export default function Home() {
                 </div>
                 <p>B.S. in Information and Computing Science</p>
                 <p className="education-note">
-                  GPA: 3.836/4.0 · Peking University Weiming Bachelor&apos;s Honor
+                  GPA: 3.836/4.0 · Peking University Weiming Bachelor&apos;s Honor ·
+                  Applied Mathematics Elite Program
                 </p>
               </div>
             </article>
