@@ -248,6 +248,20 @@ h2 {
   font-size: 0.86rem;
 }
 
+.publication-group {
+  margin-top: 1.55rem;
+}
+
+.publication-group-title {
+  margin: 0 0 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--divider);
+  font-family: var(--display);
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
 .publication-list {
   padding: 0;
   margin: 0;
@@ -289,7 +303,15 @@ h2 {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
 }
 
-.publication-content h3 {
+.publication-preview img.is-contained {
+  object-fit: contain;
+}
+
+.publication-preview img.is-rotated {
+  transform: rotate(180deg);
+}
+
+.publication-content h4 {
   margin: 0 0 0.15rem;
   font-family: var(--serif);
   font-size: 1.08rem;

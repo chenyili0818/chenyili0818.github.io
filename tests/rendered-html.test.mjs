@@ -34,11 +34,19 @@ test("server-renders Chenyi Li's academic homepage", async () => {
   assert.match(html, /<h2>News<\/h2>/);
   assert.match(html, /<h2>Education<\/h2>/);
   assert.match(html, /May 2026/);
+  assert.match(html, /Apr 2026/);
   assert.match(html, /Nov 2025/);
   assert.doesNotMatch(html, /May 01, 2026/);
   assert.match(html, /SetPO/);
   assert.match(html, /OptProver/);
+  assert.match(html, /CAM-Bench: A Benchmark for Computational and Applied Mathematics in Lean/);
+  assert.match(html, /\/research\/cam-bench\.png/);
   assert.match(html, /SITA/);
+  assert.match(html, /Formalization of algorithms for optimization with block structures/);
+  assert.match(html, /Science China Mathematics/);
+  assert.match(html, /LLM Reasoning and Formal Theorem Proving/);
+  assert.match(html, /Formalization of Optimization/);
+  assert.match(html, /Other Work/);
   assert.match(html, /Chenyi Li\*, Yanchen Nie\*/);
   assert.match(html, /Chenyi Li\*, Shuchen Zhu\*/);
   assert.match(html, /Optimization:/);
@@ -49,6 +57,7 @@ test("server-renders Chenyi Li's academic homepage", async () => {
   assert.match(html, /GitHub Pages/);
   assert.doesNotMatch(html, /Generative Modeling:/);
   assert.doesNotMatch(html, /and generative modeling/);
+  assert.doesNotMatch(html, /Rank: 2\/46/);
   assert.doesNotMatch(html, /Research in focus/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Starter Project/);
 });

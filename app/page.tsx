@@ -9,6 +9,7 @@ const profileLinks = {
 
 const selectedPublications = [
   {
+    category: "reasoning",
     venue: "ICML 2026",
     image: "/research/setpo.webp",
     title:
@@ -22,6 +23,7 @@ const selectedPublications = [
     ],
   },
   {
+    category: "reasoning",
     venue: "ICML 2026",
     image: "/research/optprover.webp",
     title:
@@ -35,6 +37,21 @@ const selectedPublications = [
     ],
   },
   {
+    category: "reasoning",
+    venue: "arXiv 2026",
+    image: "/research/cam-bench.png",
+    imageClass: "is-contained",
+    title:
+      "CAM-Bench: A Benchmark for Computational and Applied Mathematics in Lean",
+    authors: "Wentao Long, Yunfei Zhang, Chenyi Li, Li Zhou, Chumin Sun, Zaiwen Wen",
+    publication: "arXiv preprint, 2026",
+    links: [
+      ["arXiv", "https://arxiv.org/abs/2605.17255"],
+      ["Code", "https://github.com/optpku/CAM-Bench"],
+    ],
+  },
+  {
+    category: "reasoning",
     venue: "AAAI 2026",
     image: "/research/sita.webp",
     title:
@@ -49,8 +66,10 @@ const selectedPublications = [
     ],
   },
   {
+    category: "formalization",
     venue: "JAR 2025",
     image: "/research/formalization.webp",
+    imageClass: "is-rotated",
     title:
       "Formalization of Convergence Rates of Four First-order Algorithms for Convex Optimization",
     authors:
@@ -62,9 +81,10 @@ const selectedPublications = [
     ],
   },
   {
+    category: "formalization",
     venue: "SCM 2026",
     image: "/research/formalization.webp",
-    title: "Formalization of Algorithms for Optimization with Block Structures",
+    title: "Formalization of algorithms for optimization with block structures",
     authors:
       "Chenyi Li, Zichen Wang, Yifan Bai, Yunxi Duan, Yuqing Gao, Pengfei Hao, Zaiwen Wen",
     publication: "Science China Mathematics, 2026",
@@ -74,6 +94,7 @@ const selectedPublications = [
     ],
   },
   {
+    category: "formalization",
     venue: "Preprint",
     title:
       "Formalization of Optimality Conditions for Smooth Constrained Optimization Problems",
@@ -82,6 +103,7 @@ const selectedPublications = [
     links: [["arXiv", "https://arxiv.org/abs/2503.18821"]],
   },
   {
+    category: "other",
     venue: "Preprint",
     title:
       "Teacher-Feature Drifting: One-Step Diffusion Distillation with Pretrained Diffusion Representations",
@@ -91,12 +113,32 @@ const selectedPublications = [
     links: [["arXiv", "https://arxiv.org/abs/2605.07327"]],
   },
   {
+    category: "optimization",
     venue: "Preprint",
     title:
       "Accelerated Natural Gradient Method for Parametric Manifold Optimization",
     authors: "Chenyi Li*, Shuchen Zhu*, Zhonglin Xie, Zaiwen Wen",
     publication: "arXiv preprint, 2025",
     links: [["arXiv", "https://arxiv.org/abs/2504.05753"]],
+  },
+];
+
+const publicationCategories = [
+  {
+    id: "reasoning",
+    title: "LLM Reasoning and Formal Theorem Proving",
+  },
+  {
+    id: "formalization",
+    title: "Formalization of Optimization",
+  },
+  {
+    id: "optimization",
+    title: "Optimization",
+  },
+  {
+    id: "other",
+    title: "Other Work",
   },
 ];
 
@@ -224,6 +266,16 @@ export default function Home() {
               </p>
             </div>
             <div className="news-item">
+              <time>Apr 2026</time>
+              <p>
+                Our paper{" "}
+                <strong>
+                  Formalization of algorithms for optimization with block structures
+                </strong>{" "}
+                was published in <strong>Science China Mathematics</strong>.
+              </p>
+            </div>
+            <div className="news-item">
               <time>Nov 2025</time>
               <p>
                 Our paper <strong>SITA</strong> has been accepted to{" "}
@@ -278,8 +330,7 @@ export default function Home() {
                 </div>
                 <p>B.S. in Information and Computing Science</p>
                 <p className="education-note">
-                  GPA: 3.836/4.0 · Rank: 2/46 · Peking University Weiming
-                  Bachelor&apos;s Honor
+                  GPA: 3.836/4.0 · Peking University Weiming Bachelor&apos;s Honor
                 </p>
               </div>
             </article>
@@ -289,35 +340,43 @@ export default function Home() {
         <section id="publications">
           <h2>selected publications</h2>
           <p className="publication-note">* denotes equal contribution.</p>
-          <ol className="publication-list">
-            {selectedPublications.map((publication) => (
-              <li className="publication-item" key={publication.title}>
-                <div className="publication-preview">
-                  <span className="venue-badge">{publication.venue}</span>
-                  {publication.image ? (
-                    <img
-                      src={publication.image}
-                      alt={`Preview for ${publication.title}`}
-                    />
-                  ) : null}
-                </div>
-                <div className="publication-content">
-                  <h3>{publication.title}</h3>
-                  <p className="authors">{publication.authors}</p>
-                  <p className="periodical">
-                    <em>{publication.publication}</em>
-                  </p>
-                  <div className="publication-links">
-                    {publication.links.map(([label, href]) => (
-                      <ExternalLink href={href} key={href}>
-                        {label}
-                      </ExternalLink>
-                    ))}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
+          {publicationCategories.map((category) => (
+            <div className="publication-group" key={category.id}>
+              <h3 className="publication-group-title">{category.title}</h3>
+              <ol className="publication-list">
+                {selectedPublications
+                  .filter((publication) => publication.category === category.id)
+                  .map((publication) => (
+                    <li className="publication-item" key={publication.title}>
+                      <div className="publication-preview">
+                        <span className="venue-badge">{publication.venue}</span>
+                        {publication.image ? (
+                          <img
+                            src={publication.image}
+                            alt={`Preview for ${publication.title}`}
+                            className={publication.imageClass}
+                          />
+                        ) : null}
+                      </div>
+                      <div className="publication-content">
+                        <h4>{publication.title}</h4>
+                        <p className="authors">{publication.authors}</p>
+                        <p className="periodical">
+                          <em>{publication.publication}</em>
+                        </p>
+                        <div className="publication-links">
+                          {publication.links.map(([label, href]) => (
+                            <ExternalLink href={href} key={href}>
+                              {label}
+                            </ExternalLink>
+                          ))}
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+              </ol>
+            </div>
+          ))}
         </section>
       </main>
 
