@@ -11,20 +11,6 @@ const selectedPublications = [
   {
     category: "reasoning",
     venue: "ICML 2026",
-    image: "/research/setpo.webp",
-    title:
-      "SetPO: Set-Level Policy Optimization for Diversity-Preserving LLM Reasoning",
-    authors:
-      "Chenyi Li*, Yuan Zhang*, Bo Wang, Guoqing Ma, Wei Tang, Haoyang Huang, Nan Duan",
-    publication: "The 43rd International Conference on Machine Learning, 2026",
-    links: [
-      ["arXiv", "https://arxiv.org/abs/2602.01062"],
-      ["Paper", "https://openreview.net/forum?id=tYKGzVE1g7"],
-    ],
-  },
-  {
-    category: "reasoning",
-    venue: "ICML 2026",
     image: "/research/optprover.webp",
     title:
       "OptProver: Bridging Olympiad and Optimization through Continual Training in Formal Theorem Proving",
@@ -33,7 +19,23 @@ const selectedPublications = [
     publication: "The 43rd International Conference on Machine Learning, 2026",
     links: [
       ["arXiv", "https://arxiv.org/abs/2604.23712"],
-      ["Paper", "https://openreview.net/forum?id=mkHp4ZW01l"],
+      ["Paper", "https://arxiv.org/paper/2604.23712"],
+      ["Code", "https://github.com/chenyili0818/OptProver"]
+    ],
+  },
+  {
+    category: "reasoning",
+    venue: "ICML 2026",
+    image: "/research/setpo.webp",
+    title:
+      "SetPO: Set-Level Policy Optimization for Diversity-Preserving LLM Reasoning",
+    authors:
+      "Chenyi Li*, Yuan Zhang*, Bo Wang, Guoqing Ma, Wei Tang, Haoyang Huang, Nan Duan",
+    publication: "The 43rd International Conference on Machine Learning, 2026",
+    links: [
+      ["arXiv", "https://arxiv.org/abs/2602.01062"],
+      ["Paper", "https://arxiv.org/paper/2602.01062"],
+      ["Code", "https://github.com/chenyili0818/SetPO"]
     ],
   },
   {
@@ -47,7 +49,8 @@ const selectedPublications = [
     publication: "arXiv preprint, 2026",
     links: [
       ["arXiv", "https://arxiv.org/abs/2605.17255"],
-      ["Code", "https://github.com/optpku/CAM-Bench"],
+      ["Paper", "https://arxiv.org/paper/2605.17255"],
+      ["Code", "https://github.com/chenyili0818/CAM-Bench"],
     ],
   },
   {
@@ -103,14 +106,18 @@ const selectedPublications = [
     links: [["arXiv", "https://arxiv.org/abs/2503.18821"]],
   },
   {
-    category: "other",
+    category: "Generative Models",
     venue: "Preprint",
     title:
       "Teacher-Feature Drifting: One-Step Diffusion Distillation with Pretrained Diffusion Representations",
     authors:
       "Yuan Zhang*, Chenyi Li*, Guoqing Ma, Jiacheng Zha, Yifan Yang, Bo Wang, et al.",
     publication: "arXiv preprint, 2026",
-    links: [["arXiv", "https://arxiv.org/abs/2605.07327"]],
+    links: [
+      ["arXiv", "https://arxiv.org/abs/2605.07327"],
+      ["Paper", "https://arxiv.org/paper/2605.07327"],
+      ["Code", "https://github.com/chenyili0818/Teacher-Feature-Drifting"]
+    ],
   },
   {
     category: "optimization",
@@ -210,7 +217,7 @@ export default function Home() {
 
           <div className="bio">
             <p>
-              Welcome to my personal homepage! I am a Ph.D. student in Computational
+              I am a Ph.D. student in Computational
               Mathematics at the{" "}
               <ExternalLink href="https://www.math.pku.edu.cn/">
                 School of Mathematical Sciences
@@ -289,7 +296,7 @@ export default function Home() {
               </p>
             </div>
             <div className="news-item">
-              <time>Oct 15, 2025</time>
+              <time>Oct, 2025</time>
               <p>
                 Our work on formalizing convergence rates of first-order optimization
                 algorithms was published in the{" "}
