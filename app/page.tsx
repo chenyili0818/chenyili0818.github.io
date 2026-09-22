@@ -70,7 +70,7 @@ const selectedPublications = [
   },
   {
     category: "reasoning",
-    venue: "JSC (accepted)",
+    venue: "JSC",
     title:
       "A Human-AI Collaborative Workflow for Mathematical Discovery: A Case Study in Grover-Compatible Riemannian Optimization",
     authors: "Chenyi Li, Zhijian Lai, Dong An, Jiang Hu, Zaiwen Wen",
