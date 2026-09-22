@@ -10,6 +10,18 @@ const profileLinks = {
 const selectedPublications = [
   {
     category: "reasoning",
+    venue: "JSC (accepted)",
+    title:
+      "A Human-AI Collaborative Workflow for Mathematical Discovery: A Case Study in Grover-Compatible Riemannian Optimization",
+    authors: "Chenyi Li, Zhijian Lai, Dong An, Jiang Hu, Zaiwen Wen",
+    publication: "Journal of Scientific Computing, accepted",
+    links: [
+      ["arXiv", "https://arxiv.org/abs/2512.09443"],
+      ["Paper", "https://arxiv.org/pdf/2512.09443"],
+    ],
+  },
+  {
+    category: "reasoning",
     venue: "ICML 2026",
     image: "/research/optprover.webp",
     title:
@@ -106,7 +118,7 @@ const selectedPublications = [
     links: [["arXiv", "https://arxiv.org/abs/2503.18821"]],
   },
   {
-    category: "Generative Models",
+    category: "other",
     venue: "Preprint",
     title:
       "Teacher-Feature Drifting: One-Step Diffusion Distillation with Pretrained Diffusion Representations",
@@ -271,6 +283,20 @@ export default function Home() {
         <section id="news">
           <h2>News</h2>
           <div className="news-list">
+            <div className="news-item">
+              <time dateTime="2026-09">Sep 2026</time>
+              <p>
+                Our paper{" "}
+                <ExternalLink href="https://arxiv.org/abs/2512.09443">
+                  <strong>
+                    A Human-AI Collaborative Workflow for Mathematical Discovery:
+                    A Case Study in Grover-Compatible Riemannian Optimization
+                  </strong>
+                </ExternalLink>{" "}
+                has been accepted for publication in{" "}
+                <strong>Journal of Scientific Computing</strong>.
+              </p>
+            </div>
             <div className="news-item">
               <time>May 2026</time>
               <p>
