@@ -10,18 +10,6 @@ const profileLinks = {
 const selectedPublications = [
   {
     category: "reasoning",
-    venue: "JSC (accepted)",
-    title:
-      "A Human-AI Collaborative Workflow for Mathematical Discovery: A Case Study in Grover-Compatible Riemannian Optimization",
-    authors: "Chenyi Li, Zhijian Lai, Dong An, Jiang Hu, Zaiwen Wen",
-    publication: "Journal of Scientific Computing, accepted",
-    links: [
-      ["arXiv", "https://arxiv.org/abs/2512.09443"],
-      ["Paper", "https://arxiv.org/pdf/2512.09443"],
-    ],
-  },
-  {
-    category: "reasoning",
     venue: "ICML 2026",
     image: "/research/optprover.webp",
     title:
@@ -78,6 +66,18 @@ const selectedPublications = [
       ["arXiv", "https://arxiv.org/abs/2511.10356"],
       ["Paper", "https://doi.org/10.1609/aaai.v40i23.38997"],
       ["Code", "https://github.com/chenyili0818/SITA"],
+    ],
+  },
+  {
+    category: "reasoning",
+    venue: "JSC (accepted)",
+    title:
+      "A Human-AI Collaborative Workflow for Mathematical Discovery: A Case Study in Grover-Compatible Riemannian Optimization",
+    authors: "Chenyi Li, Zhijian Lai, Dong An, Jiang Hu, Zaiwen Wen",
+    publication: "Journal of Scientific Computing, accepted",
+    links: [
+      ["arXiv", "https://arxiv.org/abs/2512.09443"],
+      ["Paper", "https://arxiv.org/pdf/2512.09443"],
     ],
   },
   {
