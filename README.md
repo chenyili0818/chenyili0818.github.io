@@ -47,3 +47,16 @@ The export is written to `out/`.
 - Main page: `app/page.tsx`
 - Visual design: `app/globals.css`
 - Profile and paper imagery: `public/`
+
+## Research thumbnails
+
+- `formalization-convergence.svg`, `formalization-blocks.svg`, and
+  `formalization-kkt.svg` are schematic summaries of the corresponding papers,
+  drawn for the homepage; they are not experimental results or paper figures.
+- `angd-convergence.webp` is the left panel of Figure 1 (Burgers equation training
+  loss) from https://arxiv.org/html/2504.05753v1, resized for the homepage.
+- `human-ai-pipeline.webp` is rendered from the author-provided `pipeline.pdf`.
+- `setpo-trajectories.png` is the original `toy.png` from
+  https://github.com/chenyili0818/SetPO/blob/main/assets/img/toy.png. Its two
+  panels and shared legend are displayed in separate CSS viewports with short
+  labels; the underlying plot pixels are unchanged.

@@ -7,11 +7,17 @@ const profileLinks = {
   github: "https://github.com/chenyili0818",
 };
 
+const programLinks = {
+  undergraduate: "https://dics.pku.edu.cn/en/education/theeliteundergraduateprogram/index.htm",
+  phd: "https://dics.pku.edu.cn/en/education/theeliteprogramofcomputationalandappliedmathematicsforphdcandidates/index.htm",
+};
+
 const selectedPublications = [
   {
     category: "reasoning",
-    venue: "ICML 2026",
     image: "/research/optprover.webp",
+    imageAlt: "OptBench accuracy comparison under different continual-training settings, with Pass@1 and Pass@32 results",
+    figureCrop: { x: 36, y: 26, width: 865, height: 514, sourceWidth: 935 },
     title:
       "OptProver: Bridging Olympiad and Optimization through Continual Training in Formal Theorem Proving",
     authors:
@@ -25,8 +31,13 @@ const selectedPublications = [
   },
   {
     category: "reasoning",
-    venue: "ICML 2026",
-    image: "/research/setpo.webp",
+    image: "/research/setpo-trajectories.png",
+    imageAlt: "GRPO and SetPO trajectory embeddings during training, with a shared training-step color scale",
+    comparisonPanels: [
+      { label: "GRPO", x: 52, y: 132, width: 721, height: 721, sourceWidth: 2097 },
+      { label: "SetPO", x: 1008, y: 132, width: 721, height: 721, sourceWidth: 2097 },
+    ],
+    comparisonLegend: { x: 1834, y: 182, width: 263, height: 590, sourceWidth: 2097 },
     title:
       "SetPO: Set-Level Policy Optimization for Diversity-Preserving LLM Reasoning",
     authors:
@@ -40,7 +51,6 @@ const selectedPublications = [
   },
   {
     category: "reasoning",
-    venue: "arXiv 2026",
     image: "/research/cam-bench.png",
     imageClass: "is-contained",
     title:
@@ -55,7 +65,6 @@ const selectedPublications = [
   },
   {
     category: "reasoning",
-    venue: "AAAI 2026",
     image: "/research/sita.webp",
     title:
       "SITA: A Framework for Structure-to-Instance Theorem Autoformalization",
@@ -70,21 +79,22 @@ const selectedPublications = [
   },
   {
     category: "reasoning",
-    venue: "JSC",
+    image: "/research/human-ai-pipeline.webp",
+    imageClass: "is-contained",
     title:
       "A Human-AI Collaborative Workflow for Mathematical Discovery: A Case Study in Grover-Compatible Riemannian Optimization",
     authors: "Chenyi Li, Zhijian Lai, Dong An, Jiang Hu, Zaiwen Wen",
-    publication: "Journal of Scientific Computing, accepted",
+    publication: "Journal of Scientific Computing, 109:74, 2026",
     links: [
       ["arXiv", "https://arxiv.org/abs/2512.09443"],
-      ["Paper", "https://arxiv.org/pdf/2512.09443"],
+      ["Paper", "https://doi.org/10.1007/s10915-026-03493-4"],
     ],
   },
   {
     category: "formalization",
-    venue: "JAR 2025",
-    image: "/research/formalization.webp",
-    imageClass: "is-rotated",
+    image: "/research/formalization-convergence.svg",
+    imageAlt: "Schematic of Lean formalization: convexity and smoothness to convergence proofs",
+    imageClass: "is-contained",
     title:
       "Formalization of Convergence Rates of Four First-order Algorithms for Convex Optimization",
     authors:
@@ -93,12 +103,14 @@ const selectedPublications = [
     links: [
       ["arXiv", "https://arxiv.org/abs/2403.11437"],
       ["Paper", "https://doi.org/10.1007/s10817-025-09741-w"],
+      ["Code", "https://github.com/optsuite/optlib"],
     ],
   },
   {
     category: "formalization",
-    venue: "SCM 2026",
-    image: "/research/formalization.webp",
+    image: "/research/formalization-blocks.svg",
+    imageAlt: "Schematic of Lean formalization for BCD and ADMM convergence",
+    imageClass: "is-contained",
     title: "Formalization of algorithms for optimization with block structures",
     authors:
       "Chenyi Li, Zichen Wang, Yifan Bai, Yunxi Duan, Yuqing Gao, Pengfei Hao, Zaiwen Wen",
@@ -106,34 +118,28 @@ const selectedPublications = [
     links: [
       ["arXiv", "https://arxiv.org/abs/2503.18806"],
       ["Paper", "https://doi.org/10.1007/s11425-025-2516-2"],
+      ["Code", "https://github.com/optsuite/optlib"],
     ],
   },
   {
     category: "formalization",
-    venue: "Preprint",
+    image: "/research/formalization-kkt.svg",
+    imageAlt: "Schematic of Lean formalization for KKT optimality conditions",
+    imageClass: "is-contained",
     title:
       "Formalization of Optimality Conditions for Smooth Constrained Optimization Problems",
     authors: "Chenyi Li, Shengyang Xu, Chenyang Sun, Liangqi Zhou, Zaiwen Wen",
     publication: "arXiv preprint, 2025",
-    links: [["arXiv", "https://arxiv.org/abs/2503.18821"]],
-  },
-  {
-    category: "other",
-    venue: "Preprint",
-    title:
-      "Teacher-Feature Drifting: One-Step Diffusion Distillation with Pretrained Diffusion Representations",
-    authors:
-      "Yuan Zhang*, Chenyi Li*, Guoqing Ma, Jiacheng Zha, Yifan Yang, Bo Wang, et al.",
-    publication: "arXiv preprint, 2026",
     links: [
-      ["arXiv", "https://arxiv.org/abs/2605.07327"],
-      ["Paper", "https://arxiv.org/paper/2605.07327"],
-      ["Code", "https://github.com/chenyili0818/Teacher-Feature-Drifting"]
+      ["arXiv", "https://arxiv.org/abs/2503.18821"],
+      ["Code", "https://github.com/optsuite/optlib"],
     ],
   },
   {
     category: "optimization",
-    venue: "Preprint",
+    image: "/research/angd-convergence.webp",
+    imageAlt: "Training loss comparison for ANGD, NGD, Adam, and SGD on the Burgers equation; Figure 1, left panel",
+    imageClass: "is-contained",
     title:
       "Accelerated Natural Gradient Method for Parametric Manifold Optimization",
     authors: "Chenyi Li*, Shuchen Zhu*, Zhonglin Xie, Zaiwen Wen",
@@ -154,10 +160,6 @@ const publicationCategories = [
   {
     id: "optimization",
     title: "Optimization",
-  },
-  {
-    id: "other",
-    title: "Other Work",
   },
 ];
 
@@ -185,6 +187,37 @@ function ExternalLink({
     >
       {children}
     </a>
+  );
+}
+
+type FigureCropRegion = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  sourceWidth: number;
+};
+
+function CroppedFigure({ src, alt, crop }: {
+  src: string;
+  alt: string;
+  crop: FigureCropRegion;
+}) {
+  return (
+    <div
+      className="publication-figure-crop"
+      style={{ aspectRatio: `${crop.width} / ${crop.height}` }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        style={{
+          width: `${crop.sourceWidth / crop.width * 100}%`,
+          left: `${-crop.x / crop.width * 100}%`,
+          top: `${-crop.y / crop.height * 100}%`,
+        }}
+      />
+    </div>
   );
 }
 
@@ -220,10 +253,10 @@ export default function Home() {
 
           <aside className="profile-photo">
             <img
-              src="/profile/chenyi-li-scholar.jpg"
+              src="/profile/chenyi-li-mountains.jpg"
               alt="Chenyi Li"
-              width="207"
-              height="256"
+              width="2000"
+              height="1500"
             />
           </aside>
 
@@ -242,41 +275,53 @@ export default function Home() {
               <ExternalLink href="https://faculty.bicmr.pku.edu.cn/~wenzw/">
                 Zaiwen Wen
               </ExternalLink>
+              . I received my B.S. degree in Information and Computing Science from
+              the School of Mathematical Sciences, Peking University, in 2024.
+            </p>
+
+            <p>
+              I am a member of the{" "}
+              <ExternalLink href={programLinks.phd}>
+                Elite Ph.D. Program in Applied Mathematics
+              </ExternalLink>{" "}
+              and the Elite Program in Mathematics at the School of Mathematical
+              Sciences, Peking University. My email is{" "}
+              <ExternalLink href={profileLinks.email}>
+                lichenyi@stu.pku.edu.cn
+              </ExternalLink>
               .
             </p>
 
-            <p>
-              I am a member of both the Elite Ph.D. Program in Applied Mathematics
-              and the Applied Mathematics Elite Program at the School of Mathematical
-              Sciences, Peking University.
-            </p>
+          </div>
 
+          <div className="research-interests">
             <p>
-              My research interests broadly span large language model reasoning,
-              formal theorem proving, and optimization. I focus on the following
-              directions:
+              My research interests span large language model reasoning,
+              formal theorem proving, and optimization.
             </p>
-
-            <ul>
+            <ul className="research-directions">
               <li>
-                <strong>LLM Reasoning:</strong> reinforcement learning and
-                verifier-guided training for reliable and diverse reasoning.
+                <strong>LLM Reasoning</strong>
+                <span>
+                  Reinforcement learning and verifier-guided training to improve
+                  the reliability and diversity of reasoning in large language models.
+                </span>
               </li>
               <li>
-                <strong>Formal Theorem Proving:</strong> Lean-based theorem proving,
-                autoformalization, and formalization of applied mathematics.
+                <strong>Formal Theorem Proving</strong>
+                <span>
+                  Lean-based theorem proving, autoformalization, and the formalization
+                  of mathematical theories and algorithms in applied mathematics.
+                </span>
               </li>
               <li>
-                <strong>Optimization:</strong> designing better optimization
-                algorithms and developing optimization-inspired methods for large
-                language models.
+                <strong>Optimization</strong>
+                <span>
+                  The design and analysis of optimization algorithms, and the development
+                  of optimization-inspired methods for large language models.
+                </span>
               </li>
             </ul>
-
-            <p>
-              I received my B.S. degree in Information and Computing Science from
-              Peking University in 2024.
-            </p>
           </div>
         </section>
 
@@ -284,16 +329,14 @@ export default function Home() {
           <h2>News</h2>
           <div className="news-list">
             <div className="news-item">
-              <time dateTime="2026-09">Sep 2026</time>
+              <time dateTime="2026-10">Oct 2026</time>
               <p>
                 Our paper{" "}
-                <ExternalLink href="https://arxiv.org/abs/2512.09443">
-                  <strong>
-                    A Human-AI Collaborative Workflow for Mathematical Discovery:
-                    A Case Study in Grover-Compatible Riemannian Optimization
-                  </strong>
-                </ExternalLink>{" "}
-                has been accepted for publication in{" "}
+                <span className="news-paper">
+                  A Human-AI Collaborative Workflow for Mathematical Discovery:
+                  A Case Study in Grover-Compatible Riemannian Optimization
+                </span>{" "}
+                was published in{" "}
                 <strong>Journal of Scientific Computing</strong>.
               </p>
             </div>
@@ -308,9 +351,9 @@ export default function Home() {
               <time>Apr 2026</time>
               <p>
                 Our paper{" "}
-                <strong>
+                <span className="news-paper">
                   Formalization of algorithms for optimization with block structures
-                </strong>{" "}
+                </span>{" "}
                 was published in <strong>Science China Mathematics</strong>.
               </p>
             </div>
@@ -322,7 +365,7 @@ export default function Home() {
               </p>
             </div>
             <div className="news-item">
-              <time>Oct, 2025</time>
+              <time>Oct 2025</time>
               <p>
                 Our work on formalizing convergence rates of first-order optimization
                 algorithms was published in the{" "}
@@ -349,8 +392,11 @@ export default function Home() {
                 </div>
                 <p>Ph.D. Student in Computational Mathematics</p>
                 <p className="education-note">
-                  Advisor: Prof. Zaiwen Wen · Member of the Elite Ph.D. Program in
-                  Applied Mathematics
+                  Advisor: Prof. Zaiwen Wen ·{" "}
+                  Member of the{" "}
+                  <ExternalLink href={programLinks.phd}>
+                    Elite Ph.D. Program in Applied Mathematics
+                  </ExternalLink>
                 </p>
               </div>
             </article>
@@ -369,8 +415,10 @@ export default function Home() {
                 </div>
                 <p>B.S. in Information and Computing Science</p>
                 <p className="education-note">
-                  GPA: 3.836/4.0 · Peking University Weiming Bachelor&apos;s Honor ·
-                  Applied Mathematics Elite Program
+                  GPA: 3.836/4.0 · Peking University Weiming Bachelor&apos;s Honor ·{" "}
+                  <ExternalLink href={programLinks.undergraduate}>
+                    Applied Mathematics Elite Program
+                  </ExternalLink>
                 </p>
               </div>
             </article>
@@ -378,7 +426,7 @@ export default function Home() {
         </section>
 
         <section id="publications">
-          <h2>selected publications</h2>
+          <h2>Selected publications</h2>
           <p className="publication-note">* denotes equal contribution.</p>
           {publicationCategories.map((category) => (
             <div className="publication-group" key={category.id}>
@@ -389,11 +437,36 @@ export default function Home() {
                   .map((publication) => (
                     <li className="publication-item" key={publication.title}>
                       <div className="publication-preview">
-                        <span className="venue-badge">{publication.venue}</span>
-                        {publication.image ? (
+                        {publication.comparisonPanels && publication.comparisonLegend ? (
+                          <div className="setpo-comparison" role="group" aria-label={publication.imageAlt}>
+                            {publication.comparisonPanels.map((panel) => (
+                              <div className="setpo-panel" key={panel.label}>
+                                <span className="setpo-panel-label">{panel.label}</span>
+                                <CroppedFigure
+                                  src={publication.image}
+                                  alt={`${panel.label} trajectory embeddings`}
+                                  crop={panel}
+                                />
+                              </div>
+                            ))}
+                            <div className="setpo-legend">
+                              <CroppedFigure
+                                src={publication.image}
+                                alt="Shared training-step color scale, from 0 to 10k"
+                                crop={publication.comparisonLegend}
+                              />
+                            </div>
+                          </div>
+                        ) : publication.figureCrop ? (
+                          <CroppedFigure
+                            src={publication.image}
+                            alt={publication.imageAlt}
+                            crop={publication.figureCrop}
+                          />
+                        ) : publication.image ? (
                           <img
                             src={publication.image}
-                            alt={`Preview for ${publication.title}`}
+                            alt={publication.imageAlt ?? `Preview for ${publication.title}`}
                             className={publication.imageClass}
                           />
                         ) : null}
