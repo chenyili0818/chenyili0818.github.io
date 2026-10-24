@@ -96,7 +96,7 @@ section { scroll-margin-top: 88px; margin-bottom: 3.2rem; }
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 8px;
-  margin: 0;
+  margin: 1.5rem 0 0;
 }
 .profile-photo img {
   position: absolute;
@@ -271,7 +271,7 @@ footer a { color: inherit; }
   .page-title { grid-column: 1; grid-row: 1; align-self: center; }
   .page-title h1 { font-size: 2.05rem; }
   .contact-links { gap: 0.3rem 0.7rem; font-size: 0.7rem; }
-  .profile-photo { grid-column: 2; grid-row: 1; margin: 0; align-self: start; }
+  .profile-photo { grid-column: 2; grid-row: 1; margin: 0.5rem 0 0; align-self: start; }
   .bio { grid-column: 1 / -1; grid-row: 2; }
   .research-directions li { grid-template-columns: 1fr; gap: 0.2rem; margin-bottom: 1rem; }
   .research-directions strong { font-size: 0.95rem; }
