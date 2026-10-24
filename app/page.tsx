@@ -166,7 +166,7 @@ const publicationCategories = [
 export const metadata: Metadata = {
   title: "Chenyi Li",
   description:
-    "Chenyi Li is a Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, and optimization.",
+    "Chenyi Li is a third-year Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, and optimization.",
 };
 
 function ExternalLink({
@@ -262,7 +262,7 @@ export default function Home() {
 
           <div className="bio">
             <p>
-              I am a Ph.D. student in Computational
+              I am a third-year Ph.D. student in Computational
               Mathematics at the{" "}
               <ExternalLink href="https://www.math.pku.edu.cn/">
                 School of Mathematical Sciences

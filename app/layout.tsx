@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Chenyi Li",
   description:
-    "Chenyi Li is a Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, and optimization.",
+    "Chenyi Li is a third-year Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, and optimization.",
   authors: [{ name: "Chenyi Li", url: siteUrl }],
   alternates: { canonical: "/" },
   openGraph: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "Chenyi Li",
     description:
-      "Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, and optimization.",
+      "Third-year Ph.D. student at Peking University working on LLM reasoning, formal theorem proving, and optimization.",
   },
   icons: {
     icon: "/profile/chenyi-li-scholar.jpg",

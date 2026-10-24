@@ -66,8 +66,8 @@ p { margin: 0 0 1rem; }
 section { scroll-margin-top: 88px; margin-bottom: 3.2rem; }
 .about-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  column-gap: 3.5rem;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  column-gap: 2.75rem;
   row-gap: 1.75rem;
 }
 .page-title { grid-column: 1; grid-row: 1; }
@@ -96,7 +96,7 @@ section { scroll-margin-top: 88px; margin-bottom: 3.2rem; }
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 8px;
-  margin: 1.5rem 0 0;
+  margin: 4rem 0 0;
 }
 .profile-photo img {
   position: absolute;
@@ -251,7 +251,7 @@ footer > div {
 footer a { color: inherit; }
 
 @media (max-width: 760px) {
-  .about-section { grid-template-columns: minmax(0, 1fr) 140px; column-gap: 2rem; }
+  .about-section { grid-template-columns: minmax(0, 1fr) 160px; column-gap: 1.75rem; }
   .research-directions li { grid-template-columns: 1fr; gap: 0.2rem; }
   .education-heading { display: block; }
   .education-heading time { display: block; margin-top: 0.2rem; }
@@ -267,11 +267,11 @@ footer a { color: inherit; }
   .navbar nav { gap: 1rem; font-size: 0.73rem; }
   .page-container { padding-top: 2.25rem; }
   section { margin-bottom: 2.6rem; }
-  .about-section { grid-template-columns: minmax(0, 1fr) 92px; column-gap: 0.75rem; row-gap: 1.6rem; }
+  .about-section { grid-template-columns: minmax(0, 1fr) 104px; column-gap: 0.75rem; row-gap: 1.6rem; }
   .page-title { grid-column: 1; grid-row: 1; align-self: center; }
   .page-title h1 { font-size: 2.05rem; }
   .contact-links { gap: 0.3rem 0.7rem; font-size: 0.7rem; }
-  .profile-photo { grid-column: 2; grid-row: 1; margin: 0.5rem 0 0; align-self: start; }
+  .profile-photo { grid-column: 2; grid-row: 1; margin: 1rem 0 0; align-self: start; }
   .bio { grid-column: 1 / -1; grid-row: 2; }
   .research-directions li { grid-template-columns: 1fr; gap: 0.2rem; margin-bottom: 1rem; }
   .research-directions strong { font-size: 0.95rem; }
